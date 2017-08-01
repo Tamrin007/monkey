@@ -163,7 +163,7 @@ func (pe *PrefixExpression) String() string {
 	out.WriteString(pe.Right.String())
 	out.WriteString(")")
 
-	return pe.Token.Literal
+	return out.String()
 }
 
 type InfixExpression struct {
@@ -188,5 +188,5 @@ func (oe *InfixExpression) String() string {
 	out.WriteString(oe.Right.String())
 	out.WriteString(")")
 
-	return oe.Token.Literal
+	return out.String()
 }
